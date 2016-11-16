@@ -1,10 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-class 
-
-
-/**
+ /**
  * A custom Spell Checker program which uses a Trie as the data structure
  * 
  * The executable builds it's dictionary by reading in a defined dictionary file,
