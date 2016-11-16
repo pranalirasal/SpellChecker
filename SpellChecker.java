@@ -1,6 +1,9 @@
 import java.util.*;
 import java.io.*;
 
+class 
+
+
 /**
  * A custom Spell Checker program which uses a Trie as the data structure
  * 
@@ -26,6 +29,18 @@ import java.io.*;
  * @author Kartik Satoskar
  * 
  */
+	
+	
+class SpellCheckerException extends Exception
+{
+	spellCheckerException(String s){
+	
+		super(s);
+	}
+}	
+
+
+
 public class SpellChecker {
 	private static final char PROMPT = '>';
 	private static Trie dict = new Trie();
@@ -76,7 +91,7 @@ public class SpellChecker {
 				}
 			}
 		} catch(Exception e) {
-			//ignore fatals, when terminating loop
+			throw new Exception("Word not found");
 		}
 	}
 }
