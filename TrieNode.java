@@ -8,6 +8,7 @@ import java.util.LinkedList;
 
 public class TrieNode {
 	private char data;
+	//private ArrayList<TrieNode> children;
 	private LinkedList<TrieNode> children;
 	private TrieNode parent;
 	private String word;
