@@ -81,7 +81,9 @@ public class TrieNode {
 	 *@return List of TrieNode's children
 	 */
 	public LinkedList<TrieNode> getChildren() {
-		return this.children;
+		
+		if(children!=null)
+			return this.children;
 	}
 
 	public char getData() {
