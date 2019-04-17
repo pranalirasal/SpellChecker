@@ -15,10 +15,10 @@ public class Trie {
 		insert(root,toAdd,0);
 	}
 
-	/**
-	 *Insert String into Trie
-	 *@param curr TriNode and String toAdd 
-	 */
+	
+	// Insert String into Trie
+	 @param curr TriNode and String toAdd 
+	
 	private static void insert(TrieNode curr,String toAdd,int pos) {
 		if(toAdd != null && toAdd.length() > 0) {
 			if(pos == toAdd.length()) {
@@ -38,10 +38,10 @@ public class Trie {
 		}
 	}
 
-	/**
-	 *Check to see if a String is in Trie
-	 *@param String toFind
-	 */
+	
+	// Check to see if a String is in Trie
+	 @param String toFind
+	 
 	public String find(String toFind) {
 		String found;
 
@@ -53,13 +53,12 @@ public class Trie {
 		}
 	}
 
-	/**
-	 *Recursively finds for exact match in trie
-	 *@param node
-	 *@param toFind
-	 *@param pos
-	 *@return 
-	 */
+	// Recursively finds for exact match in trie
+	 @param node
+	 @param toFind
+	 @param pos
+	 @return 
+	 
 	private String simpleFind(TrieNode node,String toFind,int pos) {
 		if((node.getWord() != null) && (node.getWord().matches(toFind))) return node.getWord();
 		if(node.getChildren() == null) return null;
@@ -105,14 +104,14 @@ public class Trie {
 		}
 	}
 
-	/**
-	 * This is a small helper function to replacing letters in a word.
-	 * It is also used to delete letters by sending in an empty string in the place of a character in toAdd.
-	 * @param word The word
-	 * @param place The position (0-word.length()) to replace in the word
-	 * @param toAdd The character to put in that place, or an empty string to delete a character
-	 * @return the modified word
-	 */
+	
+	//  This is a small helper function to replacing letters in a word.
+	 // It is also used to delete letters by sending in an empty string in the place of a character in toAdd.
+	  @param word The word
+	  @param place The position (0-word.length()) to replace in the word
+	  @param toAdd The character to put in that place, or an empty string to delete a character
+	  @return the modified word
+	 
 	public static String replaceLetter(String word, int place, String toAdd) {
 		if(word.length() == 1) {
 			if(place == 0) {
@@ -132,10 +131,10 @@ public class Trie {
 		return traverseTrieNBC(this.root);
 	}
 
-	/**
-	 * Traverses the Trie childen before node
-	 * @param start
-	 */
+	
+	//  Traverses the Trie childen before node
+	  @param start
+	 
 	private static String traverseTrieCBN(TrieNode start) {
 		String toReturn = "";
 		if(start != null) {
@@ -147,10 +146,10 @@ public class Trie {
 		return toReturn;
 	}
 	
-	/**
-	 * Traverses the Trie node before children
-	 * @param start
-	 */
+	
+	 // Traverses the Trie node before children
+	  @param start
+	 
 	private static String traverseTrieNBC(TrieNode start) {
 		String toReturn = "";
 		if(start != null) {
@@ -168,11 +167,12 @@ public class Trie {
 	 * 1. + for repeated characters 
 	 * 2. [aeiou] for vowels
 	 * 3. normal characters
-	 * @param node
-	 * @param toMatch
-	 * @param pos
-	 * @return
-	 */
+	 **/
+	  @param node
+	  @param toMatch
+	  @param pos
+	  @return
+	 
 	private static String regexFind(TrieNode node, String toMatch, int pos) {
 		String found;
 		char tmpChar;
